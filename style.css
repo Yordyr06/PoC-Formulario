@@ -47,6 +47,10 @@
     margin-bottom: 16px;
 }
 
+input[type=number] {
+    appearance: textfield;
+}
+
 /* Buttons */
 .button:hover {
     cursor: pointer;

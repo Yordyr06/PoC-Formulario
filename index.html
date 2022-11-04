@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="style.css">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,25 +15,36 @@
 </head>
 
 <body>
+    <!-- formulary container -->
     <div class="form-container">
         <h1 id="tittle">Add Credit Card</h1>
         <img src="https://www.paypalobjects.com/ui-web/money-icons/card/generic_card.png" alt="img" class="img">            
         <form class="form">
-            <label for="email" class="label">Email address</label>
-            <input type="email" id="email" placeholder="example@email.com">
-            
-            <label for="password" class="label">Cell</label>
-            <input type="tel" id="password" placeholder="">
+            <!-- email input field -->
+            <label class="label">Email address</label>
+            <input type="email" id="email" placeholder="example@email.com" required>
 
-            <label for="password" class="label">Date</label>
-            <input type="date" id="date" placeholder="">
+            <!-- money input field  -->
+            <label class="label">Money</label>
+            <input type="number" id="money" placeholder="money" required>
             
+            <!-- number telephone input field -->
+            <label class="label">Tel</label>
+            <input type="tel" id="tel" placeholder="" minlength="10" maxlength="11" required>
+
+            <!-- date input field -->
+            <label class="label">Date</label>
+            <input type="date" id="date" placeholder="" required>
+            
+            <!-- credit card input field -->
             <label class="label">Credit card</label>
-            <input type="number" id="credit-card" placeholder="">
+            <input type="number" id="credit-card" placeholder="" minlength="16" maxlength="16" required>
 
+            <!-- buttons -->
             <button id="primary-button" class="button">Summit</button>
             <button id="secondary-button" class="button">Clean</button>
         </form>
     </div>
+    <script src="main.js"></script>
 </body>
 </html>
