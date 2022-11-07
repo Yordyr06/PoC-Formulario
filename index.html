@@ -26,7 +26,7 @@
 
             <!-- money input field  -->
             <label class="label">Money</label>
-            <input type="number" id="money" placeholder="money" required>
+            <input type="number" id="money" placeholder="money" onkeyup="moneyFormat()" required>
             
             <!-- number telephone input field -->
             <label class="label">Tel</label>
@@ -41,8 +41,8 @@
             <input type="number" id="credit-card" placeholder="" minlength="16" maxlength="16" required>
 
             <!-- buttons -->
-            <button id="primary-button" class="button">Summit</button>
-            <button id="secondary-button" class="button">Clean</button>
+            <button id="primary-button" class="button" onclick="primaryBtn()">Summit</button>
+            <button id="secondary-button" class="button" onclick="secondaryBtn()">Clean</button>
         </form>
     </div>
     <script src="main.js"></script>
