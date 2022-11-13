@@ -32,61 +32,108 @@
 
 }
 /* Formulary */
-.form {
+.formulary {
     display: flex;
     flex-direction: column;
 }
  /* Inputs */
-.form input {
+.formulary input {
     background-color: var(--text-input-field);
     border: none;
     border-radius: 6px;
     height: 36px;
     font-size: var(--small);
     padding: 6px;
-    margin-bottom: 16px;
+    margin: 0 4px 16px 4px;
 }
 
-input[type=number] {
+.formulary input[type=number] {
     appearance: textfield;
 }
 
+.formulary label {
+    margin: 0 16px 0 16px;;
+}
+
+#credit-card {
+    display: grid;
+    justify-items: start;
+    align-content: space-evenly;
+    justify-content: space-evenly;
+    grid-template-areas: 'head head' 'primary primary' 'item-3 item-4' ;
+}
+
+.item-1 {
+    grid-area: head;
+} .item-2 {
+    grid-area: primary;
+    width: 94%;
+} .item-3 {
+    grid-area: item-3;
+    width: auto;
+} .item-4 {
+    grid-area: item-4;
+    width: auto;
+}
+
 /* Buttons */
+.button-container { 
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
+    margin-top: 12px;
+    width: 45%;
+    height: 50px;
+    font-size: var(--middle);
+}
+
 .button:hover {
     cursor: pointer;
     transition: 1s;
 }
 
-#primary-button {
+.primary-button {
     background-color: var(--light-primary-color);
     border: none;
     border-radius: 16px;
     color: var(--white);
-    width: 300px;
-    font-size: var(--middle);
     font: bold;
-    height: 50px;
-    margin-top: 28px;
-    margin-bottom: 12px;
 }
 
-#primary-button:hover {
+.primary-button:hover {
     background-color: var(--deep-primary-color);
 }
 
-#secondary-button {
+.secondary-button {
     background-color: var(--white);
     border: 1px solid var(--light-primary-color);
     border-radius: 16px;
     color: var(--light-primary-color);
-    width: 300px;
-    font-size: var(--middle);
-    height: 50px;
-    margin-top: 12px;
-    margin-bottom: 28px;
 }
 
-#secondary-button:hover {
+.secondary-button:hover {
     border: 1px solid var(--deep-primary-color);
     color: var(--deep-primary-color);
+}
+
+@media (max-width: 640px) {
+    .form-container img {
+        display: none;
+    }
+
+    #credit-card {
+        margin-bottom: 0;
+    }
+
+    #primary-button {
+        margin-bottom: 0;
+        width: 100%;
+    }
+
+    #secondary-button {
+        margin-bottom: 0;
+        width: 100%;
+    }
 }

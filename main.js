@@ -8,37 +8,36 @@ const creditCard = document.getElementById('credit-card');
 
 
 const emailValidation = () => {
+    
+}
+
+
+
+const moneyMask = () => {
+    
+}
+
+
+
+const telMask = () => {
+    
+}
+
+
+
+const dateMask = () => {
 
 }
 
 
 
-const moneyFormat = () => {
-    money.value
-}
-
-
-
-const telValidation = () => {
-
-}
-
-
-
-const dateValidation = () => {
-
-}
-
-
-
-const creditCardValidation = () => {
+const creditCardMask = () => {
 
 }
 
 
 
 const primaryBtn = () => {
-
     document.getElementById('primary-button');   
 }
 
