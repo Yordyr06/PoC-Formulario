@@ -20,9 +20,10 @@
         <h1 id="tittle">Personal Data</h1>
         <img src="https://www.paypalobjects.com/ui-web/money-icons/card/generic_card.png" alt="img" class="img">            
         <form class="formulary">
+            
             <!-- email input field -->
             <label>Email address</label>
-            <input type="email" id="email" placeholder="example@email.com" onkeyup="emailValidation()" required>
+            <input type="email" id="email" placeholder="example@email.com" required>
 
             <!-- money input field  -->
             <label>Money</label>
@@ -30,23 +31,23 @@
             
             <!-- number telephone input field -->
             <label>Tel</label>
-            <input type="tel" id="tel" placeholder="(XXX) XXX - XXXX" minlength="10" maxlength="11" required>
+            <input type="tel" id="tel" placeholder="(XXX) XXX - XXXX" minlength="10" maxlength="11" onkeyup="telMask()" required>
 
             <!-- date input field -->
             <label>Date</label>
-            <input type="date" id="date" placeholder="XX-XX-XXXX" required>
+            <input type="date" id="date" pattern="\d{4}-\d{2}-\d{2}" required>
             
             <!-- credit card input field -->
             <div id="credit-card">
                 <label class="item-1">Credit card</label>
-                <input class="item-2" type="number" placeholder="XXXX XXXX XXXX XXXX" minlength="16" maxlength="16" required>
-                <input class="item-3" type="date">
-                <input class="item-4" type="number" minlength="3" maxlength="3">
+                <input class="item-2" type="number" placeholder="XXXX - XXXX - XXXX - XXXX" maxlength="16" onkeyup="creditCardMask()" required>
+                <input class="item-3" type="date" required pattern="\d{2}-\d{2}-\d{0}">
+                <input class="item-4" type="number" placeholder="CVV" maxlength="3" onkeyup="cvvNumber()" required>
             </div>
 
             <!-- buttons -->
             <div class="button-container">
-                <button class="button primary-button" onclick="primaryBtn()">Summit</button>
+                <button class="button primary-button">Summit</button>
                 <button class="button secondary-button" onclick="secondaryBtn()">Clean</button>
             </div>
         </form>

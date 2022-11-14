@@ -91,7 +91,7 @@
 
 .button:hover {
     cursor: pointer;
-    transition: 1s;
+    transition: 0.5s;
 }
 
 .primary-button {
